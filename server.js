@@ -31,11 +31,13 @@ const app = express();
 // CORS
 app.use(
   cors({
-    origin: "*",
+    origin: [
+      "http://localhost:5173",
+      "https://your-frontend-domain.vercel.app",
+    ],
     credentials: true,
   })
 );
-
 // Body Parser
 app.use(express.json());
 
